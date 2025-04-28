@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: 224, 251, 255;
+  --color-fg: 184, 221, 227;
+  --color-text: 3, 48, 46;
+  --color-select: 102, 72, 13;
+  --color-primary: 67, 122, 122;
+  --color-secondary: 113, 176, 176;
+  --color-today: 169 130 0;
+  --color-border: 9, 25, 26;
+}
+
+.dark {
+  --color-bg: 9, 25, 26;
+  --color-fg: 11, 43, 43;
+  --color-text: 245, 233, 191;
+  --color-select: 252, 225, 129;
+  --color-primary: 4, 26, 22;
+  --color-secondary: 92, 72, 7;
+  --color-today: 9, 25, 26;
+  --color-border: 135, 108, 19;
+}
+
+
+@layer utilities {
+  .bg-color {
+    background-color: rgb(var(--color-bg));
+  }
+  .fg-color {
+    background-color: rgb(var(--color-fg));
+  }
+  .txt-color {
+    color: rgb(var(--color-text));
+    font-family: Verdana, Tahoma, sans-serif;
+  }
+  .select-color {
+    color: rgb(var(--color-select));
+  }
+  .primary-color {
+    background-color: rgb(var(--color-primary));
+  }
+  .secondary-color {
+    background-color: rgb(var(--color-secondary));
+  }
+  .today-color {
+    background-color: rgb(var(--color-today));
+  }
+  .card-border {
+    border-style: inset;
+    border-width: 1px;
+    border-color: rgb(var(--color-border));
+    border-radius: 5px;
+  }
+  .section-border {
+    border-style: outset inset;
+    border-width: 1px;
+    border-color: rgb(var(--color-fg));
+    border-radius: 5px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
